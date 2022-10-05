@@ -55,6 +55,9 @@ function createTestnetConfig(network: keyof typeof chainIds): NetworkUserConfig 
       : `https://eth-${network}.alchemyapi.io/v2/${alchemyKey}`;
 
   switch (network) {
+    case "goerli":
+      nodeUrl = `https://eth-goerli.g.alchemy.com/v2/${alchemyKey}`;
+      break;
     case "optimism":
       nodeUrl = `https://opt-mainnet.g.alchemy.com/v2/${alchemyKey}`;
       break;
